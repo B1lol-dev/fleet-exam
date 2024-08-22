@@ -365,3 +365,19 @@ locationsLeft.addEventListener('click', () =>{
     });
 });
 
+
+
+
+// preloader
+
+const preloader = document.getElementById('preloader');
+
+preloader.style.transition='.5s'
+
+window.addEventListener('load' , () =>{
+    preloader.style.opacity='0'
+
+    setTimeout(() => {
+        preloader.remove()    
+    }, 500);
+})
