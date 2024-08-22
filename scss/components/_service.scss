@@ -1,0 +1,90 @@
+.service{
+    padding-bottom: 136px;
+
+    .container{
+        .service__contact{
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 16px;
+            text-align: center;
+            color: $text_white;
+            padding: 16px 24px;
+            background: $bg_blue;
+            border-radius: 90px;
+            transition: .2s ease-in-out;
+            margin-inline: auto;
+            margin-block: 32px 92px;
+            display: block;
+
+            &:hover{
+                outline: 1px solid $bg_blue;
+                background: transparent;
+                color: $bg_blue;
+            }
+
+            &:active{
+                transform: scale(95%);
+            }
+        }
+
+        .service__wrapper{
+            display: flex;
+            overflow: auto;
+            gap: 24px;
+            padding-bottom: 10px;
+
+            .service__card{
+                background: $bg_service;
+                padding: 64px 32px;
+                border-radius: 20px;
+                min-width: 357px;
+
+                h6{
+                    font-family: Poppins;
+                    font-size: 16px;
+                    font-weight: 500;
+                    line-height: 24px;
+                    text-align: left;
+                    color: $text_pr;
+                    margin-top: 32px;
+                }
+
+                p{
+                    max-width: 293px;
+                    font-family: Poppins;
+                    font-size: 14px;
+                    line-height: 24px;
+                    text-align: left;
+                    color: $text_sc;
+                    margin-top: 16px;
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 750px) {
+    .service{
+        .container{    
+            .service__wrapper{
+                flex-direction: column;
+            }
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    .service{
+        .container{
+            .service__wrapper{
+                align-items: center;
+    
+                .service__card{
+                    max-width: 357px;
+                    min-width: unset;
+                }
+            }
+        }
+    }
+}

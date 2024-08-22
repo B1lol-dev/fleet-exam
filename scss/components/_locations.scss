@@ -1,0 +1,111 @@
+.locations{
+    padding-bottom: 136px;
+
+    .container{
+
+        .subtitle__center{
+            margin-top: 12px;
+        }
+
+        .locations__wrapper{
+            overflow: auto;
+            margin-top: 64px;
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            padding-bottom: 10px;
+
+            .location{
+                border: 2px solid $bg_service;
+                border: 2px solid #E6E8EC;
+                padding: 32px;
+                border-radius: 24px;
+                min-width: 256px;
+
+                .location__item{
+                    padding: 8px 12px;
+                    background: $gray_min;
+                    border-radius: 32px;
+                    height: 26px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    max-width: 44px;
+                    font-family: Poppins;
+                    font-size: 12px;
+                    font-weight: 700;
+                    line-height: 12px;
+                    text-align: left;
+                    color: $text_pr;
+                }
+
+                .location__main{
+                    margin-top: 78px;
+                    font-family: Poppins;
+                    
+                    h3{
+                        margin-top: 28px;
+                        font-size: 16px;
+                        font-weight: 600;
+                        line-height: 24px;
+                        text-align: left;
+                        color: $text_pr;
+                    }
+
+                    p{
+                        color: $text_sc;
+                        font-size: 12px;
+                        font-weight: 400;
+                        line-height: 20px;
+                        text-align: left;
+                        margin-top: 4px;
+                    }
+                }
+            }
+        }
+
+        .locations__control{
+            display: flex;
+            gap: 8px;
+            justify-content: center;
+            margin-top: 64px;
+
+            button{
+                background: transparent;
+                height: 40px;
+                width: 40px;
+                border-radius: 50%;
+                color: $text_sc;
+                border: 2px solid $gray_min;
+                transition: .2s;
+                
+                &:hover{
+                    background: $gray_min;
+                }
+
+                &:active{
+                    background: transparent;
+                    border: 2px solid transparent;
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width: 1250px) {
+    .locations{
+        .container{
+            .locations__wrapper{
+                &::-webkit-scrollbar{
+                    height: 4px;
+                }
+                
+                &::-webkit-scrollbar-thumb{
+                    background: $text_sc;
+                    border-radius: 20px;
+                }
+            }
+        }
+    }
+}

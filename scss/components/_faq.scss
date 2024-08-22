@@ -1,0 +1,100 @@
+.faq{
+    padding-bottom: 136px;
+
+    .container{
+
+        .faq__btns{
+            display: flex;
+            justify-content: center;
+            margin-top: 48px;
+            gap: 12px;
+
+            button{
+                font-size: 14px;
+                font-weight: 700;
+                line-height: 16px;
+                text-align: left;
+                padding: 6px 12px;
+                background: none;
+                color: $text_sc;
+                border-radius: 100px;
+                transition: .2s ease-in-out;
+
+                &:hover{
+                    color: $bg_blue;
+                }
+
+                &:active{
+                    transform: scale(95%);
+                }
+            }
+
+            .faq__selected{
+                color: $text_white;
+                background: $faq_btn;
+
+                &:hover{
+                    color: $faq_btn;
+                    outline: 1px solid $faq_btn;
+                    background: transparent;
+                    // opacity: .8;
+                    // color: $text_white;
+                }
+            }
+        }
+
+        .accordion__wrapper{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 64px;
+
+            .accordion{
+                height: 76px;
+                max-width: 546px;
+                overflow: hidden;
+                border-bottom: 1px solid $gray_min;
+                transition: .2s;
+                
+                .accordion__head{
+                    padding-block: 24px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    cursor: pointer;
+
+                    &:hover{
+                        .accordion__title{
+                            span{
+                                color: $bg_blue;
+                            }
+                        }   
+                        .accordion__btn{
+                            color: $bg_blue;
+                        }
+                    }
+
+                    .accordion__title{
+                        font-family: Poppins;
+                        font-size: 16px;
+                        font-weight: 500;
+                        line-height: 24px;
+                        text-align: left;
+
+                        span{
+                            margin-right: 32px;
+                            text-align: left;
+                            color: $text_sc;
+                        }
+                    }
+
+                    .accordion__btn{
+                        background: none;
+                        color: $text_sc;
+                        transition: .2s;
+                    }
+                }                
+            }
+        }
+    }
+}
